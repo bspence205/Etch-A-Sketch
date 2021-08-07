@@ -21,3 +21,12 @@ newGridButton.addEventListener("click", function () {
   clear();
   createGrid(newSize.value);
 });
+
+//Range Bar and Display:
+let newSize = document.querySelector("#new-size");
+newSize.value = 16;
+let displaySize = document.querySelector("#size-label");
+displaySize.textContent = newSize.value;
+newSize.addEventListener("mousemove", function () {
+  displaySize.textContent = newSize.value;
+});
